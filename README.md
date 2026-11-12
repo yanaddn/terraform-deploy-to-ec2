@@ -1,3 +1,18 @@
+## Overview
+- [x] Create custom VPC
+- [ ] Create custom Subnet
+- [ ] Create Route Table and Internet Gateway
+- [ ] Provision EC2 Instance
+- [ ] Deploy nginx Docker container
+- [ ] Create Security Group (Firewall)
+<img width="1320" height="409" alt="image" src="https://github.com/user-attachments/assets/0cd33eb0-dd8a-4971-bd9d-59e86d987079" />
+
+## CLI commands
+
+### aws cli setup
+
+    aws configure
+
 ### initialize
 
     terraform init
