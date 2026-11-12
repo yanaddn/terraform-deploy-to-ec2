@@ -96,6 +96,14 @@ resource "aws_instance" "myapp-server" {
   vpc_security_group_ids      = [aws_default_security_group.default-sg.id]
   availability_zone			      = var.avail_zone
 
+  user_data = <<-EOF
+    #!/bin/bash
+    yum update -y && yum install -y docker
+    systemctl enable --now docker
+    usermod -aG docker ec2-user
+    docker run -d -p 8080:80 nginx
+  EOF
+
   tags = {
     Name = "${var.env_prefix}-server"
   }
