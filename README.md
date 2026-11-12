@@ -1,10 +1,10 @@
 ## Overview
 - [x] Create custom VPC
-- [ ] Create custom Subnet
-- [ ] Create Route Table and Internet Gateway
-- [ ] Provision EC2 Instance
-- [ ] Deploy nginx Docker container
-- [ ] Create Security Group (Firewall)
+- [x] Create custom Subnet
+- [x] Create Route Table and Internet Gateway
+- [x] Provision EC2 Instance
+- [x] Deploy nginx Docker container
+- [x] Create Security Group (Firewall)
 <img width="1320" height="409" alt="image" src="https://github.com/user-attachments/assets/0cd33eb0-dd8a-4971-bd9d-59e86d987079" />
 
 ## CLI commands
@@ -50,4 +50,17 @@
     export AWS_ACCESS_KEY_ID="anaccesskey"
     export AWS_SECRET_ACCESS_KEY="asecretkey"
     export AWS_DEFAULT_REGION="us-west-2"
+
+## Final outcome
+### EC2 instance
+```
+[ec2-user@ip-10-0-10-216 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+8c29b5a9e41a   nginx     "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   relaxed_hopper
+```
+### Nginx welcome page
+<img width="1316" height="591" alt="image" src="https://github.com/user-attachments/assets/15250be8-b967-4e71-b475-0ec95b8cd51b" />
+
+### AWS console
+<img width="1402" height="813" alt="image" src="https://github.com/user-attachments/assets/a8171769-a611-4369-8d2f-cba930029db6" />
 
